@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
@@ -14,5 +14,19 @@ export class ApiService {
     let url = environment.apihost + endpoint
 
     return this.http.get<any>(url)
+  }
+
+  addShip(data:any) {
+    let endpoint = 'ships'
+    let url = environment.apihost + endpoint
+
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }
+    
+    return this.http.post(url, data, httpOptions)
+    
   }
 }
