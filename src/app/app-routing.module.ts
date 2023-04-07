@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormComponent } from './form/form.component';
-import { ListComponent } from './list/list.component';
+import { HomeComponent } from './home/home.component';
+import { ShipComponent } from './ship/ship.component';
 
 const routes: Routes = [
-  {path: 'ships', component: ListComponent},
+  {path: '', component: HomeComponent},
+  {path: 'table', component: ShipComponent},
   {path: 'new', component: FormComponent}
 ];
 

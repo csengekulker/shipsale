@@ -1,57 +1,52 @@
-<p>form works!</p>
-
-<div class="container w-50">
-    <form action="" [formGroup]="addForm" (ngSubmit)="onSubmit()">
-        <div class="row mb-2">
-            <label class="form-label col"  for="name">Name:</label>
-            <input 
-                class="form-control col" 
-                formControlName="name" 
-                type="text" 
-                id="name">
-        </div>
-
-        <div class="row mb-2">
-            <label class="form-label col" for="length">Length:</label>
-            <input 
-                class="form-control col "  
-                formControlName="length" 
-                type="text"
-                id="length">
-        </div>
-
-        <div class="row mb-2">
-            <label class="form-label col "  for="price">Price:</label>
-            <input 
-                class="form-control col" 
-                formControlName="price" 
-                type="text" 
-                id="price">
-        </div>
-
-        <div class="row mb-2">
-            <label class="form-label col " for="person">Person:</label>
-            <input 
-                class="form-control col "
-                formControlName="person" 
-                type="text"
-                id="person">
-        </div>
-
-        <div class="row mb-2">
-            <label class="form-label col-md-6" for="trailer">Trailer:</label>
-
-            <select 
-                class="form-control col-md-6 form-select" 
-                formControlName="trailer">
-                <option value="igen">igen</option>
-                <option value="nem">nem</option>
-            </select>
+<div class="container">
+    <h3 class="py-3">Add a new ship</h3>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <div class="w-50">
+            <div class="row mb-2">
+                <input
+                    placeholder="Name"
+                    class="form-control col"
+                    formControlName="name"
+                    type="text"
+                    id="name">
+            </div>
+            <div class="row mb-2">
+                <input
+                    placeholder="Length (m)"
+                    class="form-control col "
+                    formControlName="length"
+                    type="text"
+                    id="length">
+            </div>
+            <div class="row mb-2">
+                <input
+                    placeholder="Price (HUF)"
+                    class="form-control col"
+                    formControlName="price"
+                    type="text"
+                    id="price">
+            </div>
+            <div class="row mb-2">
+                <input
+                    placeholder="Person"
+                    class="form-control col "
+                    formControlName="person"
+                    type="text"
+                    id="person">
+            </div>
+            <div class="row mb-2">
+                <select
+                    class="form-control col-md-6 form-select"
+                    formControlName="trailer">
+                    <option disabled selected value="">Trailer?</option>
+                    <option value="igen">igen</option>
+                    <option value="nem">nem</option>
+                </select>
             
-        </div>
-
-        <div class="row">
-            <button class="btn btn-primary" type="submit">Hozzaadas</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-dark" type="submit">Add ship</button>
+            </div>
         </div>
     </form>
 </div>

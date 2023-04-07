@@ -15,7 +15,10 @@ export class FormComponent implements OnInit {
 
   addShip(data:any) {
     this.api.addShip(data).subscribe({
-      next: (data:any) => console.log(data),
+      next: (data:any) => {
+        this.addForm.reset()
+        alert("Ship added!")
+      },
       error: (e:any) => console.error(e)
       
     })

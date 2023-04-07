@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
+  selector: 'app-ship',
+  templateUrl: './ship.component.html',
+  styleUrls: ['./ship.component.scss']
 })
-export class ListComponent implements OnInit {
+export class ShipComponent implements OnInit {
 
   constructor(private api: ApiService) { }
   ships!:any
